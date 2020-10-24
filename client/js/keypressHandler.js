@@ -7,4 +7,7 @@ $('body').on('keydown', (event) => {
   }
 });
 
+// ajax request from keydown
+// move direction similarly to function above
+
 console.log('Client is running in the browser!');
