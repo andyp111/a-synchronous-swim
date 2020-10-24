@@ -10,7 +10,8 @@
   const ajaxTest = () => {
     $.ajax({
       type: 'GET',
-      url: serverUrl,
+      url: serverUrl, //filter the data type if valid message, then move, if image then set css background
+      // http://127.0.0.1:3000/background.jpg
       // contentType: 'application/json',
       success: (data) => {
         console.log(data);
@@ -38,6 +39,7 @@
   const ajaxFileUplaod = (file) => {
     var formData = new FormData();
     formData.append('file', file);
+    console.log(formData);
     $.ajax({
       type: 'POST',
       data: formData,
